@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: oklch(0.8 0 0);
+  margin: 0;
+}
+
+#resize-container {
+  &__input {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &__content {
+    // 필수
+    width: var(--width);
+    margin-top: var(--input-height);
+    margin-inline: auto;
+
+    // 임의
+    font-size: 1.125rem;
+    line-height: 1.5;
+    background-color: #fff;
+    padding-inline: 1rem;
+    transition: width 300ms ease-out;
+  }
+}
+
+#slider {
+  display: block;
+  width: 18.75rem;
+  margin-inline: auto;
+}
